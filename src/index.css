@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+  }
+
   body {
     @apply bg-neutral-very-dark-blue;
   }

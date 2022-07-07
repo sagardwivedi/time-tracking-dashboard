@@ -15,13 +15,15 @@ const Button = ({ text }: { text: string }) => {
 
 const App = () => {
   return (
-    <div className="text-primary-white flex justify-center items-center">
-      <div className="grid  grid-cols-2 gap-x-6">
+    <div className="flex items-center justify-center text-primary-white">
+      <div className="flex flex-row gap-x-6">
         <div>
           <div>
             <div>
               <img src={Images.ImageJeremy} alt="" />
             </div>
+            <h4 className="font-light">Report for</h4>
+            <h1 className="font-light">Jeremy Robson</h1>
           </div>
           <div className="bg-neutral-dark-blue">
             {buttonText.map((text, index) => {
@@ -29,14 +31,14 @@ const App = () => {
             })}
           </div>
         </div>
-        <div className="grid grid-rows-2 grid-flow-col gap-6">
+        <div className="grid grid-flow-col grid-rows-2 gap-8 gap-y-28">
           {data.map((item, index) => {
             return (
               <Card
                 key={index}
                 title={item.title}
-                currentTime={0}
-                previousTime={0}
+                currentTime={item.timeframes.weekly.current}
+                previousTime={item.timeframes.weekly.previous}
               />
             );
           })}

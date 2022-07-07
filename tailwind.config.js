@@ -20,7 +20,12 @@ module.exports = {
         "pale-blue": "#BDC1FF",
       },
     },
-    extend: {},
+
+    extend: {
+      fontFamily: {
+        sans: ["Rubik", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

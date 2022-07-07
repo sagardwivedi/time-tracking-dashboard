@@ -8,12 +8,12 @@ type CardProps = {
 
 const Card = ({ title, currentTime, previousTime }: CardProps) => {
   return (
-    <div className="flex flex-col justify-start">
-      <div className="bg-primary-light-red-work rounded-xl  flex justify-end">
-        <img className="w-2/4" src={Icons.IconWork} alt="Work" />
+    <div className="relative  flex h-max w-64 cursor-pointer flex-col justify-start">
+      <div className="flex justify-end rounded-xl bg-primary-light-red-work">
+        <img src={Icons.IconWork} alt="Work" />
       </div>
-      <div className="bg-neutral-dark-blue p-4 text-primary-white rounded-xl ">
-        <div className="flex flex-row justify-between items-center">
+      <div className="absolute top-14 w-full rounded-xl bg-neutral-dark-blue p-4 text-primary-white hover:bg-neutral-desaturated-blue">
+        <div className="flex flex-row items-center justify-between">
           <h3 className="text-lg">{title}</h3>
           <img src={Icons.IconEllipsis} alt="" />
         </div>
